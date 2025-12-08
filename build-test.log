@@ -1,0 +1,288 @@
+
+> e-commerce-frontend@0.1.0 build
+> next build --webpack
+
+   ▲ Next.js 16.0.7 (webpack)
+   - Environments: .env.local
+
+ ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 10.2s
+   Running TypeScript ...
+   Collecting page data using 1 worker ...
+Error: Failed to collect configuration for /about
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /cart
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /category/[slug]
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /checkout
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /contact
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /privacy-policy
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /product/[slug]
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /shop
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+Error: Failed to collect configuration for /terms_and_condition
+    at ignore-listed frames {
+  [cause]: Error: Dataset not found - Dataset "production" not found for project ID "demo"
+      at onResponse (.next/server/chunks/8304.js:10:919)
+      at f (.next/server/chunks/8304.js:10:1382)
+      at <unknown> (.next/server/chunks/8304.js:10:1581)
+      at <unknown> (.next/server/chunks/8304.js:10:1690)
+      at <unknown> (.next/server/chunks/8304.js:2:1405)
+      at g.onreadystatechange (.next/server/chunks/8304.js:2:1608)
+      at <unknown> (.next/server/chunks/8304.js:2:237) {
+    response: {
+      body: [Object],
+      url: 'https://demo.apicdn.sanity.io/v2025-01-01/data/query/production?query=%0A++++++*%5B_type+%3D%3D+%22category%22%5D%7B%0A++++++%22slug%22%3A+slug.current%2C%0A++++++name%2C%0A++++++description%2C%0A++++++%22icon%22%3A+icon%2C%0A++++++%7D%0A++++&returnQuery=false',
+      method: 'GET',
+      headers: [Object: null prototype],
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    },
+    statusCode: 404,
+    responseBody: '{\n' +
+      '  "statusCode": 404,\n' +
+      '  "error": "Dataset not found",\n' +
+      '  "message": "Dataset \\"production\\" not found for project ID \\"demo\\""\n' +
+      '}',
+    details: undefined
+  }
+}
+
+> Build error occurred
+Error: Failed to collect page data for /about
+    at ignore-listed frames {
+  type: 'Error'
+}
