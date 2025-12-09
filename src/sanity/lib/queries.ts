@@ -50,7 +50,7 @@ category->{
 isHotDeal
 }[0...12]`;
 
-export const bestSellingQuery = `*[_type == "product"] | order(totalSales desc){
+export const bestSellingQuery = `*[_type == "product" && isBestSelling == true] | order(totalSales desc){
   _id,
   name,
   slug,

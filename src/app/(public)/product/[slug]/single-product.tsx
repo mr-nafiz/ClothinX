@@ -3,19 +3,27 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Minus, Plus, ShoppingBag, ShoppingCart } from "lucide-react";
+import {
+  ChevronLeft,
+  Minus,
+  Plus,
+  ShoppingBag,
+  ShoppingCart,
+} from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 import { formatBDT } from "@/lib/price";
 import { Product } from "../../../../../sanity.types";
 import Container from "@/components/utils/Container";
 import ProductDescription from "@/components/PortableText";
 import AddToCartButton from "@/components/cart/AddToCartBtn";
+import { useRouter } from "next/navigation";
 
 interface Props {
   product: Product;
 }
 
 export default function SingleProduct({ product }: Props) {
+  const router = useRouter();
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState(
@@ -35,8 +43,16 @@ export default function SingleProduct({ product }: Props) {
     : "";
 
   return (
-    <section className="py-20 top-20">
-      <Container className="grid lg:grid-cols-2 gap-10">
+    <section className="pt-32 md:pt-28 pb-20">
+      <Container className="grid lg:grid-cols-2 gap-4 md:gap-10">
+        <Button
+          variant={"outline"}
+          size={"icon-lg"}
+          onClick={router.back}
+          className="md:hidden"
+        >
+          <ChevronLeft />
+        </Button>
         {/* LEFT: Product Images */}
         <div>
           <div className="border rounded-lg overflow-hidden">
@@ -72,7 +88,7 @@ export default function SingleProduct({ product }: Props) {
         </div>
 
         {/* RIGHT: Product Details */}
-        <div>
+        <div className="md:py-16">
           <span className="text-xs md:text-sm uppercase text-muted-foreground">
             {product.category?.name}
           </span>

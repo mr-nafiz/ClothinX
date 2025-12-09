@@ -19,7 +19,7 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
   return (
     <div
       className={cn(
-        "w-full h-fit group hover:shadow-2xl hover:-translate-1 bg-white p-1 border rounded-lg hoverEffect",
+        "w-full h-fit group hover:-translate-1 bg-white p-1 border rounded-lg hoverEffect",
         className
       )}
     >
@@ -59,14 +59,16 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
         <p className="uppercase text-muted-foreground text-xs ">
           {product.category?.name}
         </p>
-        <h1 className="font-heading text-sm md:text-base">{product.name}</h1>
+        <h1 className="font-heading text-sm md:text-base">
+          {product.name?.slice(0, 28)}
+        </h1>
         {product.stock === 0 ? (
           <span className="w-full flex justify-center py-1 border rounded-lg mt-1 text-muted-foreground text-sm md:text-base">
             out of stock
           </span>
         ) : (
-          <div className="flex items-baseline justify-between gap-2">
-            <div className="flex items-baseline gap-1">
+          <div className="flex items-end justify-between pt-1">
+            <div className="flex flex-col-reverse">
               {product.discountPrice && (
                 <span className="text-base md:text-lg">
                   {formatBDT(product.discountPrice)}

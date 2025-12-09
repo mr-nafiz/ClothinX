@@ -19,7 +19,7 @@ const ProductGrid = ({ title, description, products }: ProductGridContent) => {
   return (
     <section className="py-16 bg-gray-100">
       <Container className="space-y-6">
-        <div className="flex justify-between items-baseline">
+        <div className="flex justify-between items-baseline pl-2">
           <div>
             <h1 className="text-2xl md:text-4xl font-heading font-medium">
               {title}
@@ -31,7 +31,7 @@ const ProductGrid = ({ title, description, products }: ProductGridContent) => {
         </div>
 
         <Carousel>
-          <CarouselContent className="overflow-visible">
+          <CarouselContent className="p-0 md:p-2">
             {products.map((item) => (
               <CarouselItem
                 key={item._id}
