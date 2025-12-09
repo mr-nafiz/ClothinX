@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     "Shop premium Pakistani 3-piece suits at Clothing X. Luxury lawn, chiffon & embroidered dresses. New arrivals, best sellers, and exclusive deals with fast worldwide delivery.",
   icons: {
     icon: [
-      //! Android Icons
       {
         rel: "icon",
         type: "image/png",

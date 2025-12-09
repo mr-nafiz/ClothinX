@@ -60,28 +60,6 @@ export const metadata: Metadata = {
   },
 };
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ClothingStore",
-      name: "Clothing X",
-      url: "https://clothing-x.com",
-      logo: "https://clothing-x.com/logo.png",
-      image: "https://clothing-x.com/og-image.jpg",
-      description:
-        "Clothing X offers premium Pakistani 3-piece suits, embroidered lawn, chiffon and festive dresses with fast worldwide delivery.",
-      sameAs: [
-        "https://www.instagram.com/cx_clothing_x/",
-        "https://www.facebook.com/ClothingX",
-        "https://x.com/BmMejba18544?t=-lZZxgkKfabZtaM90OE3OA&s=07 ",
-        "https://www.youtube.com/@CLOTHING_X",
-      ],
-    }),
-  }}
-/>;
-
 export default async function Home() {
   const [featured, newArrivals, hotDeals, bestSelling] = await Promise.all([
     getFeaturedProducts(8),
@@ -91,6 +69,28 @@ export default async function Home() {
   ]);
   return (
     <section className="py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ClothingStore",
+            name: "Clothing X",
+            url: "https://clothing-x.com",
+            logo: "https://clothing-x.com/logo.png",
+            image: "https://clothing-x.com/og-image.jpg",
+            description:
+              "Clothing X offers premium Pakistani 3-piece suits, embroidered lawn, chiffon and festive dresses with fast worldwide delivery.",
+            sameAs: [
+              "https://www.instagram.com/cx_clothing_x/",
+              "https://www.facebook.com/ClothingX",
+              "https://x.com/BmMejba18544?t=-lZZxgkKfabZtaM90OE3OA&s=07 ",
+              "https://www.youtube.com/@CLOTHING_X",
+            ],
+          }),
+        }}
+      />
+      ;
       <p className="sr-only">
         Welcome to <strong>Clothing X</strong>, your trusted destination for
         premium Pakistani 3-piece suits crafted from luxury lawn, chiffon, and
@@ -100,28 +100,24 @@ export default async function Home() {
         and unbeatable quality.
       </p>
       <HeroSection />
-
       <ProductGrid
         products={featured}
         title="Featured Products"
         description="Handpicked Pakistani suits designed with luxurious fabrics, detailed
   embroidery, and exceptional craftsmanship."
       />
-
       <ProductGrid
         products={newArrivals}
         title="New Arrivals"
         description="Explore the newest Pakistani 3-piece suits at Clothing X — fresh designs,
   premium embroidery, and updated styles every week."
       />
-
       <ProductGrid
         products={hotDeals}
         title="Hot Deals"
         description="Enjoy exclusive discounts on premium 3-piece suits. Limited-time deals only
   at clothing-x.com."
       />
-
       <ProductGrid
         products={bestSelling}
         title="Best Selling"

@@ -10,6 +10,7 @@ import { Address } from "../../../../sanity.types";
 import { client } from "@/sanity/lib/client";
 import { createOrder, saveAddress } from "@/sanity/lib/order";
 import { SignInButton, SignUpButton, useUser } from "@clerk/nextjs";
+import { formatBDT } from "@/lib/price";
 
 export default function CheckoutPage() {
   const { user, isSignedIn } = useUser();
@@ -152,7 +153,7 @@ export default function CheckoutPage() {
   // Render
   // ----------------------------
   return (
-    <Container>
+    <Container className="pt-36 pb-10 md:pt-24">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -255,14 +256,18 @@ export default function CheckoutPage() {
                 <span>
                   {item.product.name} x {item.quantity}
                 </span>
-                <span>${(item?.product?.price || 0) * item.quantity}</span>
+                <span>
+                  {formatBDT((item?.product?.price || 0) * item.quantity)}
+                </span>
               </div>
             );
           })}
           <hr className="my-3" />
           <div className="flex justify-between font-semibold text-lg">
             <span>Total</span>
-            <span>{mounted ? `$${getTotalPrice()}` : "$0"}</span>
+            <span>
+              {mounted ? `${formatBDT(getTotalPrice())}` : `${formatBDT(0)}`}
+            </span>
           </div>
           <Button
             className="w-full mt-4"

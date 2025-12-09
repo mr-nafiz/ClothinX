@@ -11,6 +11,7 @@ interface Props {
 import { urlFor } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/fetchers";
 import { Product } from "../../../../../sanity.types";
+import { reviewType } from "@/sanity/schemaTypes/reviewType";
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
@@ -52,12 +53,53 @@ export default async function ProductPage(props: {
 }) {
   const { slug } = await props.params;
 
-  const product = await sanityFetch({
+  const product: Product = await sanityFetch({
     query: productBySlugQuery,
     params: { slug },
   });
 
   if (!product) return notFound();
+  const structureData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.metaTitle,
+    description: product.metaDescription,
+    brand: {
+      "@type": "Brand",
+      name: product.brand || "pakistani brand",
+    },
+    category: product.category?.name,
+    offers: {
+      "@type": "Offer",
+      price: product.discountPrice ?? product.price,
+      priceCurrency: "BDT",
+      availability: product.stock,
+      seller: {
+        "@type": "Organization",
+        name: "Clothing X",
+      },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: product.rating,
+      reviewCount: 69,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    additionalProperty: {
+      "@type": "PropertyValue",
+      name: "Total sell",
+      value: product.totalSales,
+    },
+  };
 
-  return <SingleProduct product={product as Product} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structureData) }}
+      />
+      <SingleProduct product={product as Product} />
+    </>
+  );
 }
