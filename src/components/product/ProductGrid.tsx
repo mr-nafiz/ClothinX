@@ -1,8 +1,6 @@
-import Image from "next/image";
 import { Product } from "../../../sanity.types";
 import Container from "../utils/Container";
 import ProductCard from "./ProductCard";
-import { urlFor } from "@/sanity/lib/image";
 import {
   Carousel,
   CarouselContent,
@@ -10,8 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
 
 interface ProductGridContent {
   title: string;

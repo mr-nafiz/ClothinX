@@ -32,7 +32,7 @@ const Footer2 = ({
     title: "",
     url: "/",
   },
-  tagline = "Discover premium Pakistani 3-piece suits crafted with quality, elegance, and comfort. We bring you stylish designs for every occasion at affordable prices.",
+  tagline = "Clothing X Your Trusted Store for Luxury Pakistani 3-Piece Suits",
   menuItems = [
     {
       title: "Product",
@@ -58,15 +58,15 @@ const Footer2 = ({
     {
       title: "Social",
       links: [
-        { text: "Facebook", url: "https://www.facebook.com/share/1BnpTyQZx3/" },
+        { text: "Facebook", url: "https://www.facebook.com/ClothingX" },
         {
           text: "Instagram",
-          url: "https://www.instagram.com/cx_clothing_x?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          url: "https://www.instagram.com/cx_clothing_x/",
         },
         { text: "YouTube", url: "https://www.youtube.com/@CLOTHING_X" },
         {
           text: "X",
-          url: "https://x.com/BmMejba18544?t=-lZZxgkKfabZtaM90OE3OA&s=07 ",
+          url: "https://x.com/BmMejba18544?t=-lZZxgkKfabZtaM90OE3OA&s=07",
         },
       ],
     },
@@ -80,6 +80,14 @@ const Footer2 = ({
   return (
     <section className="py-10">
       <Container>
+        <p className="sr-only">
+          Clothing X offers premium Pakistani 3-piece suits including luxury
+          lawn, chiffon, embroidered and festive dresses. Discover high-quality
+          Pakistani outfits designed for weddings, parties and daily wear. Shop
+          online with fast worldwide delivery, secure checkout and trusted
+          customer service at clothing-x.com.
+        </p>
+
         <footer>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">

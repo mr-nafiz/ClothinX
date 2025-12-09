@@ -24,13 +24,49 @@ async function getCategoryData(slug: string) {
         stock,
         brand->{name, slug},
         category->{name, slug},
-        images
+        images,
+        slug
       }
     }
   `;
 
   return client.fetch(query, { slug });
 }
+
+export const generateMetadata = async ({ params }: Props) => {
+  const { slug } = await params;
+
+  return {
+    title: `Buy ${slug} Pakistani Suits – Clothing X`,
+    description: `Shop premium ${slug} Pakistani 3-piece suits at Clothing X. Luxury fabrics, embroidery & exclusive designs.`,
+    keywords: [
+      `${slug} Pakistani suits`,
+      `${slug} dresses`,
+      "Pakistani 3-piece suits",
+      "Clothing X category",
+    ],
+    openGraph: {
+      title: `Shop ${slug} at Clothing X`,
+      description: `Explore premium ${slug} Pakistani dresses online.`,
+      url: `https://clothing-x.com/category/${slug}`,
+      images: [
+        {
+          url: `https://clothing-x.com/og-${slug}.jpg`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Shop ${slug} – Clothing X`,
+      description: `Premium ${slug} Pakistani suits available now.`,
+      images: [`https://clothing-x.com/og-${slug}.jpg`],
+    },
+    robots: { index: true, follow: true },
+  };
+};
 
 const page = async ({ params }: Props) => {
   const { slug } = await params; // slug is already a string
@@ -48,7 +84,6 @@ const page = async ({ params }: Props) => {
       </div>
     );
   }
-
   return (
     <section className="py-20">
       <Container>

@@ -8,7 +8,42 @@ import {
   MessagesSquare,
   Phone,
 } from "lucide-react";
-import React from "react";
+export const metadata = {
+  title: "Contact Clothing X – Customer Support & Order Assistance",
+  description:
+    "Need help? Contact Clothing X for customer support, order tracking, product inquiries, and wholesale Pakistani 3-piece suit requests.",
+  keywords: [
+    "Contact Clothing X",
+    "Clothing X customer support",
+    "Clothing X contact number",
+    "Pakistani clothing support",
+    "Order help Clothing X",
+  ],
+  openGraph: {
+    title: "Contact Clothing X – We're Here to Help",
+    description:
+      "Reach out to Clothing X for support, order assistance, and product inquiries.",
+    url: "https://clothing-x.com/contact",
+    siteName: "Clothing X",
+    images: [
+      {
+        url: "https://clothing-x.com/og-contact.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Clothing X",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Clothing X",
+    description:
+      "Get in touch with Clothing X customer support for help with orders and inquiries.",
+    images: ["https://clothing-x.com/og-contact.jpg"],
+  },
+  robots: { index: true, follow: true },
+};
 
 const page = () => {
   return (
@@ -72,7 +107,7 @@ const page = () => {
               <p className="text-muted-foreground pb-2">
                 Mon-Fri from 8am to 5pm
               </p>
-              <span className="underline cursor-pointer">+88017885784574</span>
+              <span className="underline cursor-pointer">+8801710700472</span>
             </div>
           </div>
         </div>

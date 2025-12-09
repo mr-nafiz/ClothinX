@@ -1,22 +1,10 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import Container from "@/components/utils/Container";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../ui/carousel";
-import { Card, CardContent } from "../ui/card";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const HeroSection = () => {
-  const router = useRouter();
   return (
     <section className="w-full h-[680px] md:h-[calc(100vh-70px)] ">
       <Image
@@ -34,21 +22,19 @@ const HeroSection = () => {
       <Container className="h-full flex flex-row items-center  justify-between">
         <div className="space-y-6 flex flex-col items-center md:items-start">
           <div className="space-y-2">
-            <h1 className="text-4xl md:text-6xl text-center md:text-start font-heading max-w-xl text-background font-medium md:font-normal">
-              Celebrate in Stunning Pakistani Fashion
+            <h1 className="text-3xl md:text-6xl text-center md:text-start font-heading text-background font-medium md:font-normal">
+              Clothing X – <br /> Celebrate in Stunning <br /> Pakistani Fashion
             </h1>
             <p className=" text-center md:text-start mt-2 text-zinc-100">
               Vibrant colors, intricate details, and outfits made to shine at
-              every event.
+              every event. <strong>Clothing X</strong>
             </p>
           </div>
-          <Button
-            variant={"default"}
-            size={"lg"}
-            onClick={() => router.push("/shop")}
-          >
-            Explore the Collection <ArrowRight />
-          </Button>
+          <Link href="/shop">
+            <Button variant={"default"} size={"lg"}>
+              Explore the Collection <ArrowRight />
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

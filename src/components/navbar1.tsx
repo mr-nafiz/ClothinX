@@ -73,7 +73,7 @@ const Navbar1 = async ({
   logo = {
     url: "/",
     src: "/logo.png",
-    alt: "logo",
+    alt: "Clothing X",
     title: "",
   },
   menu = [

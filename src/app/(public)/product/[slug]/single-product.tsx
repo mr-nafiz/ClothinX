@@ -210,7 +210,12 @@ export default function SingleProduct({ product }: Props) {
 
           {/* Buttons */}
           <div className="mt-8 flex gap-4">
-            <AddToCartButton product={product} size="lg" variant="default">
+            <AddToCartButton
+              product={product}
+              size="lg"
+              variant="default"
+              className="w-full"
+            >
               Add To Cart <ShoppingBag />
             </AddToCartButton>
           </div>
