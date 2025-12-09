@@ -86,9 +86,6 @@ export default function ShopFilters({ products, categories, brands }: Props) {
     stockFilter,
   ]);
 
-  console.log("Filtered Products:", filteredProducts);
-  console.log("Selected Category:", categories);
-
   return (
     // 🔥 FIX: prevent POST /shop causing empty products
     <form

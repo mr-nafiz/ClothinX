@@ -48,7 +48,8 @@ export default async function ShopPage() {
       stock,
       images,
       "category": category->{ _id, name, "slug": slug.current },
-      "brand": brand->{ _id, name, "slug": slug.current }
+      "brand": brand->{ _id, name, "slug": slug.current },
+      slug
     }
   `);
 
